@@ -2,6 +2,6 @@ const mongoose = require("mongoose");
 
 module.exports = () => {
   return mongoose.connect(
-    "mongodb+srv://dhaval:dhaval_123@cluster0.ljuvz.mongodb.net/web15-fileuploads?retryWrites=true&w=majority"
+    "mongodb://127.0.0.1:27017/web-15-C3_evaluation"
   );
 };

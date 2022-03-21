@@ -39,27 +39,3 @@ const options = {
 const uploads = multer(options);
 
 module.exports = uploads;
-
-// -- Refactor code ----
-// const uploadFiles = (formKey, method) => {
-//   return function (req, res, next) {
-//     let uploadedItem;
-//     if (method == "single") {
-//       uploadedItem = uploads.single(formKey);
-//     } else if (method == "multiple") {
-//       uploadedItem = uploads.any(formKey);
-//     }
-
-//     return uploadedItem(req, res, function (err) {
-//       if (err instanceof multer.MulterError) {
-//         // A Multer error occurred when uploading.
-//         return res.status(500).send({ message: err.message });
-//       } else if (err) {
-//         // An unknown error occurred when uploading.
-//         return res.status(501).send({ message: err.message });
-//       }
-//       // Everything went fine.
-//       return next();
-//     });
-//   };
-// };
